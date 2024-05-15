@@ -19,12 +19,15 @@ namespace Diablo
     public class MainWindow
         {
             // Window dimensions
-            const int screenWidth = 800;
-            const int screenHeight = 450;
+            const int screenWidth = 600;
+            const int screenHeight = 600;
+
+        static bool Gamejust = false;
 
             // Button dimensions
             const int buttonWidth = 200;
             const int buttonHeight = 50;
+
 
             public static GameState currentState = GameState.MainMenu;
 
@@ -47,7 +50,18 @@ namespace Diablo
                         case GameState.OptionsMenu:
                             OptionsMenu.RunOptionsMenu();
                             break;
+                    case GameState.Game:
+                        Raylib.ClearBackground(Color.Black);
+                        if (Gamejust == false)
+                        {
+                            TheGame.gameinit();
+                            Gamejust = true;
+
+                        }
+                        TheGame.Draw();
+                        break;
                         // Add other cases for different states
+
                 }
                 }
 
@@ -76,7 +90,7 @@ namespace Diablo
                     // Start button
                     if (CheckButtonClicked(mousePosition, screenWidth / 2 - buttonWidth / 2, 100, buttonWidth, buttonHeight))
                     {
-                        
+                        currentState = GameState.Game;
                     }
             }
             }

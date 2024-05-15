@@ -6,8 +6,8 @@ namespace Diablo
     class Program
     {
         const int GameFPS = 60;
-        const int ScreenWidth = 32;
-        const int ScreenHeight = 32;
+        const int ScreenWidth = 512;
+        const int ScreenHeight = 512;
 
         class Player
         {
@@ -32,6 +32,7 @@ namespace Diablo
             static void Main(string[] args)
             {
                 MainWindow.RunMainMenu();
+
 
                 Raylib.SetTargetFPS(GameFPS);
                 Player player = new Player(1.0f / GameFPS);

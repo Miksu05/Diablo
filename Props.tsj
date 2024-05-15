@@ -1,0 +1,14 @@
+{ "columns":25,
+ "image":"..\/..\/..\/Downloads\/Pixel Crawler - FREE - 1.8 (1)\/Pixel Crawler - FREE - 1.8\/Environment\/Dungeon Prison\/Assets\/Props.png",
+ "imageheight":400,
+ "imagewidth":400,
+ "margin":0,
+ "name":"Props",
+ "spacing":0,
+ "tilecount":625,
+ "tiledversion":"1.10.2",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}
